@@ -23,10 +23,12 @@
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: center;
             margin-bottom: 20px;
             animation: slideInFromTop 1.5s ease-in-out;
+            color: #ff4500;
+            text-shadow: 2px 2px 5px #7b0000;
         }
 
         .list {
@@ -41,35 +43,37 @@
             display: flex;
             align-items: center;
             padding: 15px;
-            border-radius: 8px;
+            border-radius: 12px;
             background: linear-gradient(135deg, #ffdddd, #ffaaaa);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             font-size: 1.2rem;
             animation: zoomIn 0.8s ease-in-out;
             transform-origin: center;
+            position: relative;
         }
 
         .item img {
             width: 40px;
             height: 40px;
             margin-right: 15px;
+            animation: bounce 1.5s infinite;
         }
 
-        .item:nth-child(even) {
-            animation-delay: 0.2s;
-        }
-
-        .item:nth-child(odd) {
-            animation-delay: 0.4s;
+        .item::before {
+            content: "🔥";
+            position: absolute;
+            left: -30px;
+            font-size: 2rem;
+            animation: flame 1.2s infinite;
         }
 
         .note {
-            margin-top: 20px;
+            margin-top: 30px;
             font-size: 1.5rem;
-            color: #7b0000;
-            text-shadow: 1px 1px 2px #000;
+            color: #ff4500;
+            text-shadow: 2px 2px 3px #000;
             text-align: center;
-            animation: fadeIn 1s ease-in-out;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         @keyframes fadeIn {
@@ -102,23 +106,47 @@
                 opacity: 1;
             }
         }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes flame {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Hitungan Rokok Gudang Garam Merah</h1>
-        <p>klo bisa ga usah rokok buanyak bet rokoknya ni</p>
+        <p>Klo bisa ga usah rokok buanyak bet rokoknya ni</p>
         <div class="list">
-            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 1 : 6500</div>
-            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 2 : 6500</div>
-            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 3 : 6500</div>
-            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 4 : 6300</div>
-            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 5 : 6300</div>
-            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 6 : 6300</div>
-            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 7 : 6300</div>
-            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 8 : 6300</div>
-            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 9 : 6300</div>
-            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 10 : 6300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 1 : 16500</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 2 : 16500</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 3 : 16500</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 4 : 16300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 5 : 16300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 6 : 16300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 7 : 16300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 8 : 16300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 9 : 16300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 10 : 16300</div>
         </div>
         <div class="note">Akan di tambah jika ada pembelian rokok</div>
     </div>
