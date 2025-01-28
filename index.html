@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitungan Rokok Gudang Garam Merah</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff5f5;
+            color: #7b0000;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: slideInFromTop 1.5s ease-in-out;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ffdddd, #ffaaaa);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1.2rem;
+            animation: zoomIn 0.8s ease-in-out;
+            transform-origin: center;
+        }
+
+        .item img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .item:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+
+        .item:nth-child(odd) {
+            animation-delay: 0.4s;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #7b0000;
+            text-shadow: 1px 1px 2px #000;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hitungan Rokok Gudang Garam Merah</h1>
+        <div class="list">
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 1 : 6500</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 2 : 6500</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 3 : 6500</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 4 : 6300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 5 : 6300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 6 : 6300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 7 : 6300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 8 : 6300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 9 : 6300</div>
+            <div class="item"><img src="icon-gudang-garam.png" alt="Gudang Garam">ROKOK 10 : 6300</div>
+        </div>
+        <div class="note">Akan di tambah jika ada pembelian rokok</div>
+    </div>
+</body>
+</html>
